@@ -1,5 +1,5 @@
 # lambda-check-in-test project
-* Desc: A project to achieve a auto-check-in system with the use of AWS Lambda, Github webhook and google spreadsheet.
+* Desc: A project to achieve a auto-check-in system with the use of AWS Lambda, Github Webhook and Google Spreadsheet.
 
 * Workflow: 
   1. Automatically create an issue everyday for github users to comment
