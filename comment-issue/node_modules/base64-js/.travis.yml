@@ -1,0 +1,18 @@
+sudo: false
+os:
+  - linux
+language: node_js
+node_js:
+  - "6"
+  - "8"
+  - "10"
+  - "12"
+env:
+  matrix:
+    - TEST_SUITE=unit
+matrix:
+  include:
+    - os: linux
+      node_js: "6"
+      env: TEST_SUITE=lint
+script: npm run $TEST_SUITE
