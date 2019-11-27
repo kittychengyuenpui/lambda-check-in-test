@@ -12,4 +12,7 @@
   your user name (e.g. kittycheng)
   ```
 ## **Resources** 
-   https://github.com/theoephraim/node-google-spreadsheet
+   * **Full guide on how to create the serverless auto check-in system**
+     - https://docs.google.com/gview?url=https://github.com/kittychengyuenpui/lambda-check-in-test/raw/master/Full-guide.pdf&embedded=true
+   * **Simple Google Spreadsheet Access (node.js)**
+     - https://github.com/theoephraim/node-google-spreadsheet
