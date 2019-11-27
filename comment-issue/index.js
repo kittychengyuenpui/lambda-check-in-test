@@ -1,7 +1,7 @@
 var GoogleSpreadsheet = require('google-spreadsheet');
 var async = require('async');
 
-// spreadsheet key is the long id in the sheets URL
+// spreadsheet id is the long id in the spreadsheets URL
 var spreadsheetId = process.env.spreadsheetId;
 var doc = new GoogleSpreadsheet(spreadsheetId);
 var sheet;
@@ -12,10 +12,7 @@ function step(){
 
 
 exports.handler = async(event, context, callback) => {
-	//if (!event.body) return 'no body'
-    //const body = JSON.parse(event.body) || {}
-	console.log('Request Headers:', event.body);
-	const body = event.body || event;
+    const body = event.body || event;
     if (!body || body.action !== 'created') return response(callback);
     const title = body.issue.title.split(' ');
     if (!title.length) return response(callback);
