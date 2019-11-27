@@ -1,0 +1,38 @@
+{
+  "name": "create-issue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Index.js",
+  "dependencies": {
+    "asn1": "^0.2.4",
+    "aws-sign2": "^0.7.1",
+    "assert-plus": "^1.0.0",
+    "aws4": "^1.8.0",
+    "ecc-jsbn": "^0.2.0",
+    "google-auth-library": "^5.5.1",
+    "extend": "^3.0.2",
+    "google-spreadsheet": "^2.0.8",
+    "http-signature": "^1.3.1",
+    "ip-regex": "^4.1.0",
+    "json-stringify-safe": "^5.0.1",
+    "jsbn": "^1.1.0",
+    "psl": "^1.4.0",
+    "safe-buffer": "^5.2.0",
+    "querystring": "^6.8.3",
+    "request": "^2.88.1",
+    "safer-buffer": "^2.1.2",
+    "sshpk": "^1.16.1",
+    "tough-cookie": "^3.0.1",
+    "xml2js": "^0.4.22"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "lambda-check-in-test"
+  },
+  "author": "kittychengyuenpui",
+  "license": "MIT"
+}
