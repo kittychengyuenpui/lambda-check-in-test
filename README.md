@@ -1,4 +1,4 @@
-# Lambda-check-in-test project
+# **Lambda-check-in-test project**
 **Description:** A project to achieve a serverless auto-check-in system with the use of AWS Lambda, Github Webhook and Google Spreadsheet.
 
 ## **Workflow** 
