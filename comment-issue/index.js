@@ -5,6 +5,7 @@ var async = require('async');
 var spreadsheetId = process.env.spreadsheetId;
 var doc = new GoogleSpreadsheet(spreadsheetId);
 var sheet;
+var moment = require('moment-timezone');
 
 function step(){
 	console.log('');
@@ -18,9 +19,17 @@ exports.handler = async(event, context, callback) => {
     if (!title.length) return response(callback);
     const date = title[1];
     const account = body.comment.user.login;
-    console.log('log:', date, account);
+	const commentAt = body.comment.updated_at.split('Z');
+	const localDateTime = moment(body.comment.updated_at).tz("Asia/Hong_Kong").utcOffset('+0800').format();
+	const localCommentAt = localDateTime.split('T');
+	if(localCommentAt[0] != date) return response(callback);
+	const commentTime = localCommentAt[1].split('Z')[0];	
+	const ct = commentTime.split(':');
+	const commentTime2 = ct[0] + ':' + ct[1];
+	
+    console.log('log:', date, account, commentTime2);
     try {
-		await updateSheet(date, account);
+		await updateSheet(date, account, commentTime2);
         return callback(null, {
             statusCode: 200,
             body: date + account
@@ -40,7 +49,7 @@ const response = (cb) => {
 }
 
 
-async function updateSheet(date, account) {
+async function updateSheet(date, account, commentTime) {
   try {
 		//await getSheet(step);
 		var creds = require('./service-account-creds.json');
@@ -82,7 +91,7 @@ async function updateSheet(date, account) {
 					'return-empty': true
 				  }, function(err, cells) {
 						if (cells && cells[0]) {
-							cells[0].value = '✔'; 
+							cells[0].value = commentTime; 
 							cells[0].save(function(err) {
 							  if (err) {
 								console.log('err', err);
