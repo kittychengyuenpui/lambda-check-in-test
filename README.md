@@ -1,4 +1,4 @@
-# **Lambda-check-in-test project**
+# **Lambda-check-in-test project :date:**
 **Description:** A project to achieve a serverless auto-check-in system with the use of AWS Lambda, Github Webhook and Google Spreadsheet.
 
 ## **Workflow** 
@@ -9,9 +9,9 @@
 ## **Issue comment format/template**
   ```
   check-in:
-  your name (e.g. kittycheng) or anything else you want to add
+  your name (e.g. kittycheng) or anything else you want to add 🙂😉
   ```
-## **Resources** 
+## **Resources :link:** 
    * **Full guide on how to create the serverless auto check-in system**
      - https://docs.google.com/gview?url=https://github.com/kittychengyuenpui/lambda-check-in-test/raw/master/Full-guide.pdf&embedded=true
    * **Simple Google Spreadsheet Access (node.js)**

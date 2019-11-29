@@ -9,7 +9,7 @@ var content = [
   'Check-in format:',
   '```',
   'check-in:',
-  'your name (e.g. kittycheng) or anything else you want to add',
+  'your name (e.g. kittycheng) or anything else you want to add 🙂😉',
   '```'
 ].join('\n');
   
@@ -18,7 +18,7 @@ const createIssue = async (event) => {
       url: endpoint,
       method: "post",
       data: {
-        title: '[Auto-check-in] ' + today,
+        title: '[Auto-check-in] ' + today + ' 📅',
         body: content
       },
       mode: 'no-cors',
