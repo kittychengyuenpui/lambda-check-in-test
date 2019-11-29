@@ -8,8 +8,8 @@
 
 ## **Issue comment format/template**
   ```
-  check-in
-  your user name (e.g. kittycheng)
+  check-in:
+  your name (e.g. kittycheng) or anything else you want to add
   ```
 ## **Resources** 
    * **Full guide on how to create the serverless auto check-in system**

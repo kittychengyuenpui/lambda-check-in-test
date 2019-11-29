@@ -8,8 +8,8 @@ var today = moment().utcOffset('+0800').format('YYYY-MM-DD');
 var content = [
   'Check-in format:',
   '```',
-  'check-in',
-  'your name',
+  'check-in:',
+  'your name (e.g. kittycheng) or anything else you want to add',
   '```'
 ].join('\n');
   
